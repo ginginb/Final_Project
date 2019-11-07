@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>School Test Page</title>
+<meta = charset="utf-8">
+<link rel="stylesheet" href="cssPage.css">
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+<h1>Quiz Final Project</h1>
+</header>
+
+<script src = "javaPage.js"> </script>
+
+
+<fieldset>
+	<legend> Question 1 </legend> 
+		<form action="" method="POST">
+
+            <label>Which of these planets is farthest from the Sun?</label>
+			<br><br>
+            <input type="radio" name="question1" value="ju" onclick="reset_msg();" /> Jupiter
+            <br><br>
+            <input type="radio" name="question1" value="ne" onclick="reset_msg();" /> Neptune
+            <br><br>
+			 <input type="radio" name="question1" value="ur" onclick="reset_msg();" /> Uranus
+            <br><br>
+			
+            <div id="msg1"></div>
+            <input type="submit" value="Submit" onclick="return send1();" />
+        </form>
+</fieldset>
+<br>
+<fieldset>
+	<legend> Question 2 </legend> 
+		<form action="" method="POST">
+
+            <label>When was JavaScript invented?</label>
+			<br><br>
+            <input type="radio" name="question2" value="95" onclick="reset_msg();" /> 1995
+            <br><br>
+            <input type="radio" name="question2" value="76" onclick="reset_msg();" /> 1976
+            <br><br>
+			 <input type="radio" name="question2" value="01" onclick="reset_msg();" /> 2001
+            <br><br>
+			
+            <div id="msg2"></div>
+            <input type="submit" value="Submit" onclick="return send2();" />
+        </form>
+</fieldset>
+<br>
+<fieldset>
+	<legend> Question 3 </legend> 
+		<form action="" method="POST">
+
+            <label>Which was an actual event in the Olympics?</label>
+			<br><br>
+            <input type="radio" name="question3" value="Hs" onclick="reset_msg();" /> Handstand racing
+            <br><br>
+            <input type="radio" name="question3" value="Pt" onclick="reset_msg();" /> Playing Tetris
+            <br><br>
+			 <input type="radio" name="question3" value="Ca" onclick="reset_msg();" /> Competitive art
+            <br><br>
+			
+            <div id="msg3"></div>
+            <input type="submit" value="Submit" onclick="return send3();" /> 
+        </form>
+</fieldset>
+<br>
+
+
+
+<footer>
+<p> Created by John, Ginny, and Hunter </p>
+<p> CSIS228 </p>
+</footer>
+</div>
+</body>
+</html>
