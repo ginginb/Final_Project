@@ -5,17 +5,30 @@
 
    Filename: javaPage.js
 */
-var incorrect = '<span style="color:red;">Incorrect!</span><br /><br />';
-var correct = '<span style="color:green;">Correct!</span><br /><br />';
+var incorrect = "Incorrect!";
+var correct = "Correct!";
 
+var msg1 = 'Question 1: ';
+var msg2 = 'Question 2: ';
+var msg3 = 'Question 3: ';
+
+//function is called when Submit is clicked and calls the function for each question
+function send() {
+	send1();
+	send2();
+	send3();
+	write();
+}
+
+//funtion checks the answers for question 1
 function send1() {
   var questions = document.getElementsByName("question1");
   if (questions[0].checked == true) {
-    document.getElementById('msg1').innerHTML = incorrect; return false;
+    msg1 += incorrect; return false; 
   } else if (questions[1].checked == true) {
-    document.getElementById('msg1').innerHTML = correct; return false;
+    msg1 += correct; return false;
   } else if (questions[2].checked == true) {
-    document.getElementById('msg1').innerHTML = incorrect; return false;
+    msg1 += incorrect; return false;
   } else {
     // no checked
     alert("You must select an answer");
@@ -24,20 +37,18 @@ function send1() {
   return true;
 }
 
-function reset_msg() {
-  document.getElementById('msg1').innerHTML = '';
-}
 
 //------------------------------------------------------------------------------------------------------------//
 
+//function checks the answers for question 2
 function send2() {
   var questions = document.getElementsByName("question2");
   if (questions[0].checked == true) {
-    document.getElementById('msg2').innerHTML = correct; return false;
+    msg2 += correct; return false;
   } else if (questions[1].checked == true) {
-    document.getElementById('msg2').innerHTML = incorrect; return false;
+    msg2 += incorrect; return false;
   } else if (questions[2].checked == true) {
-    document.getElementById('msg2').innerHTML = incorrect; return false;
+    msg2 += incorrect; return false;
   } else {
     // no checked
     alert("You must select an answer");
@@ -46,20 +57,18 @@ function send2() {
   return true;
 }
 
-function reset_msg() {
-  document.getElementById('msg2').innerHTML = '';
-}
 
 //------------------------------------------------------------------------------------------------------------//
 
+//function checks the answers for question 3
 function send3() {
   var questions = document.getElementsByName("question3");
   if (questions[0].checked == true) {
-    document.getElementById('msg3').innerHTML = incorrect; return false;
+    msg3 += incorrect; return false;
   } else if (questions[1].checked == true) {
-    document.getElementById('msg3').innerHTML = incorrect; return false;
+    msg3 += incorrect; return false;
   } else if (questions[2].checked == true) {
-    document.getElementById('msg3').innerHTML = correct; return false;
+    msg3 += correct; return false;
   } else {
     // no checked
     alert("You must select an answer");
@@ -68,6 +77,14 @@ function send3() {
   return true;
 }
 
-function reset_msg() {
-  document.getElementById('msg3').innerHTML = '';
+//function writes the results to a new window
+function write() {
+	var myWindow = window.open("", "MsgWindow", "width=400, height=400");
+	myWindow.document.write(msg1 + "<br>"); 
+	myWindow.document.write(msg2 + "<br>");
+	myWindow.document.write(msg3 + "<br>");
 }
+
+//event listener for the submit button to start running all of the functions
+var submitButton = document.getElementById("submit"); 
+submitButton.addEventListener("click", send, false);
