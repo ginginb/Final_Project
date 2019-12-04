@@ -11,12 +11,15 @@ var correct = "Correct!";
 var msg1 = 'Question 1: ';
 var msg2 = 'Question 2: ';
 var msg3 = 'Question 3: ';
-
+var msg4 = 'Question 4: ';
+var msg5 = 'Question 4: ';
 //function is called when Submit is clicked and calls the function for each question
 function send() {
 	send1();
 	send2();
 	send3();
+	send4();
+	send5();
 	write();
 }
 
@@ -76,6 +79,43 @@ function send3() {
   }
   return true;
 }
+//------------------------------------------------------------------------------------------------------------//
+
+//function checks the answers for question 4
+function send4() {
+  var questions = document.getElementsByName("question4");
+  if (questions[0].checked == true) {
+    msg4 += correct; return false;
+  } else if (questions[1].checked == true) {
+    msg4 += incorrect; return false;
+  } else if (questions[2].checked == true) {
+    msg4 += incorrect; return false;
+  } else {
+    // no checked
+    alert("You must select an answer");
+    return false;
+  }
+  return true;
+}
+
+//------------------------------------------------------------------------------------------------------------//
+
+//function checks the answers for question 5
+function send5() {
+  var questions = document.getElementsByName("question5");
+  if (questions[0].checked == true) {
+    msg5 += correct; return false;
+  } else if (questions[1].checked == true) {
+    msg5 += incorrect; return false;
+  } else if (questions[2].checked == true) {
+    msg5 += incorrect; return false;
+  } else {
+    // no checked
+    alert("You must select an answer");
+    return false;
+  }
+  return true;
+}
 
 //function writes the results to a new window
 function write() {
@@ -83,6 +123,8 @@ function write() {
 	myWindow.document.write(msg1 + "<br>"); 
 	myWindow.document.write(msg2 + "<br>");
 	myWindow.document.write(msg3 + "<br>");
+	myWindow.document.write(msg4 + "<br>");
+	myWindow.document.write(msg5 + "<br>");
 }
 
 //event listener for the submit button to start running all of the functions
