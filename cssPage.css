@@ -1,3 +1,14 @@
+
+/* 
+  Final Project
+   Authors: Ginny Brinkerhoff Fay, John Gray, Hunter Foulkes
+   Date: 12/3/2019
+
+*/
+
+
+
+
 header,
 nav,
 footer
@@ -29,7 +40,9 @@ body
 
 header
 	{
+
 	background-color: #00004d;     /* Banner position and color */
+
 	font-family: sans-serif;
 	}
 
@@ -62,12 +75,16 @@ h1
 	background-color: darkslategray;
 }
 
+
 .nav li
+
 {
 	display:inline;
 }
 
+
 .nav a
+
 {
 	display: inline-block;
 	font-family: Arial;
@@ -76,7 +93,9 @@ h1
 	padding: 10px 30px;
 }
 
+
 a:link
+
 {
 	color: white;
 	text-decoration: none;
@@ -111,7 +130,15 @@ a:active
 	display: inline;
 }
 
-
+input[type=button], input[type=submit], input[type=reset]   /*Styling for Submit Button */
+{
+	margin-left: 45%;
+	margin-right: 50%;
+	width: 100px;
+	background-color: LimeGreen;
+	color: white;
+	font-weight: bold;
+}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -143,7 +170,9 @@ a:active
 		line-height: 200%;
 	}
 
+
 	nav
+
 	{
 		float: none;
 		width: auto;
@@ -167,7 +196,9 @@ a:active
 		margin: 0;
 	}
 
+
 	main
+
 	{
 		font-size: 90%;
 		margin: 0;
@@ -197,7 +228,9 @@ a:active
 			line-height: 120%;
 		}
 
+
 		nav a
+
 		{
 			display: block;
 			padding: 0.2em;
@@ -205,20 +238,24 @@ a:active
 			border-bottom: 1px; solid; #330000;
 		}
 
+
 		nav li
 		{
 			display: block;
 		}
+
 
 		nav ul
 		{
 			text-align: left;
 		}
 
+
 		main
 		{
 			padding-left: 1em;
 		}
+
 
 		.category
 		{
